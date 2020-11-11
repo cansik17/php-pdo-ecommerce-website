@@ -1,0 +1,3 @@
+Options -indexes
+RewriteEngine On
+ErrorDocument 404 http://localhost/php/eticaret1/404.php
