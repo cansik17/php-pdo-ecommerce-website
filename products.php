@@ -15,7 +15,7 @@ $count = $products->rowcount();
             <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
                 <div class="product-categori">
                     <div class="search-product">
-                        <form method="POST" action="index.php?P=8">
+                        <form method="POST" action="search">
                             <input class="form-control" name="q" placeholder="Arama yapınız..." type="text">
                             <button type="submit"> <i class="fa fa-search"></i> </button>
                         </form>
@@ -34,9 +34,9 @@ $count = $products->rowcount();
                                         foreach ($categories1Query as $rows1) {
                                         ?>
 
-                                            <a href="index.php?P=5&categoriesid=<?php echo $rows1['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows1['id'] == $_GET['categoriesid']) {
-                                                                                                                                                                echo 'active';
-                                                                                                                                                            } ?>"><?php echo $rows1['categoriesName']; ?> </a>
+                                            <a href="categories/<?php echo SEO($rows1['categoriesName']); ?>/<?php echo $rows1['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows1['id'] == $_GET['categoriesid']) {
+                                                                                                                                                                                            echo 'active';
+                                                                                                                                                                                        } ?>"><?php echo $rows1['categoriesName']; ?> </a>
 
                                         <?php
                                         }
@@ -54,9 +54,9 @@ $count = $products->rowcount();
                                             foreach ($categories2Query as $rows2) {
                                             ?>
 
-                                                <a href="index.php?P=5&categoriesid=<?php echo $rows2['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows2['id'] == $_GET['categoriesid']) {
-                                                                                                                                                                    echo 'active';
-                                                                                                                                                                } ?>"><?php echo $rows2['categoriesName']; ?> </a>
+                                                <a href="categories/<?php echo SEO($rows2['categoriesName']); ?>/<?php echo $rows2['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows2['id'] == $_GET['categoriesid']) {
+                                                                                                                                                                                                echo 'active';
+                                                                                                                                                                                            } ?>"><?php echo $rows2['categoriesName']; ?> </a>
 
                                             <?php
                                             }
@@ -77,9 +77,9 @@ $count = $products->rowcount();
                                             foreach ($categories3Query as $rows3) {
                                             ?>
 
-                                                <a href="index.php?P=5&categoriesid=<?php echo $rows3['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows3['id'] == $_GET['categoriesid']) {
-                                                                                                                                                                    echo 'active';
-                                                                                                                                                                } ?>"><?php echo $rows3['categoriesName']; ?> </a>
+                                                <a href="categories/<?php echo SEO($rows3['categoriesName']); ?>/<?php echo $rows3['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows3['id'] == $_GET['categoriesid']) {
+                                                                                                                                                                                                echo 'active';
+                                                                                                                                                                                            } ?>"><?php echo $rows3['categoriesName']; ?> </a>
 
                                             <?php
                                             }
@@ -100,9 +100,9 @@ $count = $products->rowcount();
                                             foreach ($categories4Query as $rows4) {
                                             ?>
 
-                                                <a href="index.php?P=5&categoriesid=<?php echo $rows4['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows4['id'] == $_GET['categoriesid']) {
-                                                                                                                                                                    echo 'active';
-                                                                                                                                                                } ?>"><?php echo $rows4['categoriesName']; ?> </a>
+                                                <a href="categories/<?php echo SEO($rows4['categoriesName']); ?>/<?php echo $rows4['id']; ?>" class="list-group-item list-group-item-action <?php if ($rows4['id'] == $_GET['categoriesid']) {
+                                                                                                                                                                                                echo 'active';
+                                                                                                                                                                                            } ?>"><?php echo $rows4['categoriesName']; ?> </a>
 
                                             <?php
                                             }
@@ -217,10 +217,10 @@ $count = $products->rowcount();
                                                     <img src="<?php echo $row['productimage1']; ?>" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
-                                                            <li><a href="index.php?P=6&id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="right" title="Görüntüle"><i class="fas fa-eye"></i></a></li>
+                                                            <li><a href="urun-detay/<?php echo SEO($row['productName']); ?>/<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="right" title="Görüntüle"><i class="fas fa-eye"></i></a></li>
                                                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favorilere Ekle"><i class="far fa-heart"></i></a></li>
                                                         </ul>
-            
+
                                                     </div>
                                                 </div>
                                                 <div class="why-text">

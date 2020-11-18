@@ -23,7 +23,7 @@ if(($activationCode!="") and ($mail!="")){
 		$control		=	$userUpdateQuery->rowCount();
 
 		if($control>0){
-			header("Location:index.php?SK=0");
+			header("Location:./");
 			exit();
 		}else{
 			header("Location:" . $SiteLink);

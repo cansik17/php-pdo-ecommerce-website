@@ -35,10 +35,10 @@ if (isset($_POST['login'])) {
 			$_SESSION["users"]	=	$mail;
 			
 			if($_SESSION["users"]==$mail){
-				header("Location:../index.php?P=0");
+				header("Location:.././");
 				exit();
 			}else{
-				header("Location:../index.php?P=3");
+				header("Location:../login");
 				exit();
 			}
 		}else{
@@ -71,19 +71,19 @@ if (isset($_POST['login'])) {
 				$sendMail->MsgHTML($prepareMailContent);
 				$sendMail->send();
 
-				header("Location:../index.php?P=0");
+				header("Location:.././");
 				exit();
 			}catch(Exception $e){
-				header("Location:../index.php?P=3");
+				header("Location:../login");
 				exit();
 			}			
 		}
 	}else{
-		header("Location:../index.php?P=3");
+		header("Location:../login");
 		exit();
 	}
 }else{
-	header("Location:../index.php?P=3");
+	header("Location:../login");
 	exit();
 }
 }
@@ -99,7 +99,7 @@ if ($_GET['userlogout'] == "ok") {
     unset($_SESSION["users"]);
     session_destroy();
 
-    header("Location:../index.php?P=0");
+    header("Location:./");
     exit();
 }
 
@@ -151,11 +151,11 @@ if (isset($_POST['register'])) {
 
     if (($mail != "") and ($password != "") and ($repassword != "") and ($nameSurname != "") and ($phone != "") and ($gender != "")) {
         if ($checked == 0) {
-            header("Location:../index.php?P=4");
+            header("Location:../register");
             exit();
         } else {
             if ($password != $repassword) {
-                header("Location:../index.php?P=4");
+                header("Location:../register");
                 exit();
             } else {
                 $controlQuery        =    $db->prepare("SELECT * FROM users WHERE mail = ?");
@@ -163,7 +163,7 @@ if (isset($_POST['register'])) {
                 $userCount    =    $controlQuery->rowCount();
 
                 if ($userCount > 0) {
-                    header("Location:../index.php?P=4");
+                    header("Location:../register");
                     exit();
                 } else {
                     $userAddQuery        =    $db->prepare("INSERT INTO users (mail, password, nameSurname, phone, gender, status, registerDate, registeripAddress, activationCode) values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -201,21 +201,21 @@ if (isset($_POST['register'])) {
                             $sendMail->MsgHTML($prepareMailContent);
                             $sendMail->send();
 
-                            header("Location:../index.php?P=0");
+                            header("Location:.././");
                             exit();
                         } catch (Exception $e) {
-                            header("Location:../index.php?P=4");
+                            header("Location:../register");
                             exit();
                         }
                     } else {
-                        header("Location:../index.php?P=0");
+                        header("Location:.././");
                         exit();
                     }
                 }
             }
         }
     } else {
-        header("Location:../index.php?P=4");
+        header("Location:../register");
         exit();
     }
 }
@@ -292,15 +292,15 @@ if (isset($_POST['editProfileUser'])) {
             $control        =    $userUpdateQuery->rowCount();
 
             if ($control > 0) {
-                header("Location:../index.php?P=12");
+                header("Location:../edit-profile");
                 exit();
             } else {
-                header("Location:../index.php?P=12");
+                header("Location:../edit-profile");
                 exit();
             }
         } else {
             
-            header("Location:../index.php?P=0");
+            header("Location:.././");
             exit();
         }
 

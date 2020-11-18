@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <h2>Hakkımızda</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.php?P=0">Anasayfa</a></li>
+                    <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
                     <li class="breadcrumb-item active">Hakkımızda</li>
                 </ul>
             </div>

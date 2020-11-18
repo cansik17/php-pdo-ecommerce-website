@@ -14,7 +14,7 @@ if (isset($_SESSION['users'])) {
                 <div class="col-lg-12">
                     <h2>Yeni Hesap Oluştur</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php?P=0">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
                         <li class="breadcrumb-item active">Kayıt Ol</li>
                     </ul>
                 </div>
@@ -69,8 +69,8 @@ if (isset($_SESSION['users'])) {
                             </select>
                         </div>
                         <div class="input-group mb-3">
-                            <a class="small" href="index.php?P=20">Kullanıcı Sözleşmesi</a>&nbsp; <p class="small" >&</p> &nbsp;
-                            <a class="small" href="index.php?P=16">Kullanım Koşulları</a>
+                            <a class="small" href="user-aggrement">Kullanıcı Sözleşmesi</a>&nbsp; <p class="small" >&</p> &nbsp;
+                            <a class="small" href="terms-of-use">Kullanım Koşulları</a>
                         </div>
                  
             

@@ -12,7 +12,7 @@ if (isset($_SESSION['users'])) {
                 <div class="col-lg-12">
                     <h2>Hesabım</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php?P=0">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
                         <li class="breadcrumb-item active">Hesabım</li>
                     </ul>
                 </div>
@@ -30,7 +30,7 @@ if (isset($_SESSION['users'])) {
                         <div class="account-box">
                             <div class="service-box">
                                 <div class="service-icon">
-                                    <a href="index.php?P=12"><i class="fa fa-lock"></i> </a>
+                                    <a href="edit-profile"><i class="fa fa-lock"></i> </a>
                                 </div>
                                 <div class="service-desc">
                                     <h4>Hesap &amp; Ayarları</h4>
@@ -44,7 +44,7 @@ if (isset($_SESSION['users'])) {
                         <div class="account-box">
                             <div class="service-box">
                                 <div class="service-icon">
-                                    <a href="index.php?P=13"> <i class="fa fa-truck"></i> </a>
+                                    <a href="my-orders"> <i class="fa fa-truck"></i> </a>
                                 </div>
                                 <div class="service-desc">
                                     <h4>Siparişlerim</h4>
@@ -58,7 +58,7 @@ if (isset($_SESSION['users'])) {
                         <div class="account-box">
                             <div class="service-box">
                                 <div class="service-icon">
-                                    <a href="index.php?P=10"> <i class="fa fa-heart"></i> </a>
+                                    <a href="my-favourites"> <i class="fa fa-heart"></i> </a>
                                 </div>
                                 <div class="service-desc">
                                     <h4>Favorilerim</h4>
@@ -73,7 +73,7 @@ if (isset($_SESSION['users'])) {
     </div>
 <?php
 } else {
-    header("Location:index.php?P=0");
+    header("Location:./");
     exit();
 }
 ?>

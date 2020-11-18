@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <h2>Üyelik sözleşmesi</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.php?P=0">Anasayfa</a></li>
+                    <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
                     <li class="breadcrumb-item active">Üyelik sözleşmesi</li>
                 </ul>
             </div>

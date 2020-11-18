@@ -50,7 +50,7 @@ if (isset($_POST['addToCart'])) {
                     $productUpdateCount        =    $productUpdateQuery->rowCount();
 
                     if ($productUpdateCount > 0) {
-                        header("Location:../index.php?P=7");
+                        header("Location:../shopping-cart");
                         exit();
                     } else {
                         echo "BİR HATA OLUŞTU..";
@@ -67,7 +67,7 @@ if (isset($_POST['addToCart'])) {
                         $cartIdUpdate->execute([$lastId, $userid]);
                         $cartIdUpdateCount        =    $cartIdUpdate->rowCount();
                         if ($cartIdUpdateCount > 0) {
-                            header("Location:../index.php?P=7");
+                            header("Location:../shopping-cart");
                             exit();
                         } else {
                             echo "BİR HATA OLUŞTU..";
@@ -89,7 +89,7 @@ if (isset($_POST['addToCart'])) {
                     $cartIdUpdate->execute([$lastId, $userid]);
                     $cartIdUpdateCount        =    $cartIdUpdate->rowCount();
                     if ($cartIdUpdateCount > 0) {
-                        header("Location:../index.php?P=7");
+                        header("Location:../shopping-cart");
                         exit();
                     } else {
                         echo "BİR HATA OLUŞTU.xxxx.";

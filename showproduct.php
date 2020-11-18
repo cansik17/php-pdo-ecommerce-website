@@ -112,11 +112,11 @@ $sizetableamountQuery = $sizetableamount->fetch(PDO::FETCH_ASSOC);
 <!-- End Cart -->
 <?php
 	}else{
-		header("Location:index.php");
+		header("Location:./");
 		exit();
 	}
 }else{
-	header("Location:index.php");
+	header("Location:./");
 	exit();
 }
 ?>

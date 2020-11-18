@@ -52,7 +52,7 @@ function activeCode()
 function SEO($Deger)
 {
     $Icerik            =    trim($Deger);
-    $Degisecekler    =    array("ç", "Ç", "ğ", "Ğ", "ı", "İ", "ö", "Ö", "ş", "Ş", "ü", "Ü");
+    $Degisecekler      =    array("ç", "Ç", "ğ", "Ğ", "ı", "İ", "ö", "Ö", "ş", "Ş", "ü", "Ü");
     $Degisenler        =    array("c", "c", "g", "g", "i", "i", "o", "o", "s", "s", "u", "u");
     $Icerik            =    str_replace($Degisecekler, $Degisenler, $Icerik);
     $Icerik            =    mb_strtolower($Icerik, "UTF-8");

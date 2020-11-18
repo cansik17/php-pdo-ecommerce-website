@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <h2>Ödeme Sayfası</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.php?P=7">Sepetim</a></li>
+                    <li class="breadcrumb-item"><a href="shopping-cart">Sepetim</a></li>
                     <li class="breadcrumb-item active">Ödeme Sayfası</li>
                 </ul>
             </div>
@@ -26,10 +26,10 @@
                         <h3>Ödeme İçin Hesabına Giriş yapman Gerekmektedir</h3>
                     </div>
                     <div class="div">
-                        <a href="index.php?P=3"><b>Giriş</b> Yapmak için Tıklayınız</a>
+                        <a href="login"><b>Giriş</b> Yapmak için Tıklayınız</a>
                     </div>
                     <div class="div">
-                        <a href="index.php?P=4"><b>Yeni Hesap</b> Oluşturmak için Tıklayınız</a>
+                        <a href="register"><b>Yeni Hesap</b> Oluşturmak için Tıklayınız</a>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                         <div class="title-left">
                             <h3>Fatura & Kargo Adresi</h3>
                         </div>
-                        <form action="index.php?P=11" method="POST" class="needs-validation" novalidate>
+                        <form action="place-order" method="POST" class="needs-validation" novalidate>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -228,7 +228,7 @@
     </div>
 <?php
         }else {
-            header("Location:index.php?P=0");
+            header("Location:./");
         }}
 ?>
 </div>

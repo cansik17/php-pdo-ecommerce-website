@@ -35,6 +35,7 @@ if (isset($_REQUEST["P"])) {
 
     <!-- Site Metas -->
     <title><?php echo $SiteName; ?> </title>
+    <base href="/php/eticaret1/">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -73,14 +74,14 @@ if (isset($_REQUEST["P"])) {
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php?P=0"><img src="assets/images/logo.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="./"><img src="assets/images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php?P=0">Anasayfa</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./">Anasayfa</a></li>
                         <li class="dropdown megamenu-fw">
                             <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Ürün Kategorileri</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
@@ -93,7 +94,7 @@ if (isset($_REQUEST["P"])) {
                                                     <?php
                                                     foreach ($categories1Query as $rows1) {
                                                     ?>
-                                                        <li><a href="index.php?P=5&categoriesid=<?php echo $rows1['id']; ?>"><?php echo $rows1['categoriesName']; ?></a></li>
+                                                        <li><a href="categories/<?php echo SEO($rows1['categoriesName']); ?>/<?php echo $rows1['id']; ?>"><?php echo $rows1['categoriesName']; ?></a></li>
 
                                                     <?php
                                                     }
@@ -110,7 +111,7 @@ if (isset($_REQUEST["P"])) {
                                                     <?php
                                                     foreach ($categories2Query as $rows2) {
                                                     ?>
-                                                        <li><a href="index.php?P=5&categoriesid=<?php echo $rows2['id']; ?>"><?php echo $rows2['categoriesName']; ?></a></li>
+                                                        <li><a href="categories/<?php echo SEO($rows2['categoriesName']); ?>/<?php echo $rows2['id']; ?>"><?php echo $rows2['categoriesName']; ?></a></li>
 
                                                     <?php
                                                     }
@@ -127,8 +128,7 @@ if (isset($_REQUEST["P"])) {
                                                     <?php
                                                     foreach ($categories3Query as $rows3) {
                                                     ?>
-                                                        <li><a href="index.php?P=5&categoriesid=<?php echo $rows3['id']; ?>"><?php echo $rows3['categoriesName']; ?></a></li>
-
+                                                        <li><a href="categories/<?php echo SEO($rows3['categoriesName']); ?>/<?php echo $rows3['id']; ?>"><?php echo $rows3['categoriesName']; ?></a></li>
                                                     <?php
                                                     }
                                                     ?>
@@ -143,7 +143,7 @@ if (isset($_REQUEST["P"])) {
                                                     <?php
                                                     foreach ($categories4Query as $rows4) {
                                                     ?>
-                                                        <li><a href="index.php?P=5&categoriesid=<?php echo $rows4['id']; ?>"><?php echo $rows4['categoriesName']; ?></a></li>
+                                                        <li><a href="categories/<?php echo SEO($rows4['categoriesName']); ?>/<?php echo $rows4['id']; ?>"><?php echo $rows4['categoriesName']; ?></a></li>
 
                                                     <?php
                                                     }
@@ -160,8 +160,8 @@ if (isset($_REQUEST["P"])) {
 
 
                         <!-- <li class="nav-item"><a class="nav-link" href="index.php?P=1">Hakkımızda</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="index.php?P=2">Bize Ulaşın</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?P=7">Sepetim&nbsp;<i class="fa fa-shopping-bag"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us">Bize Ulaşın</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shopping-cart">Sepetim&nbsp;<i class="fa fa-shopping-bag"></i></a></li>
 
                         <?php
                         if (isset($_SESSION["users"])) {
@@ -169,21 +169,21 @@ if (isset($_REQUEST["P"])) {
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Hesabım</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="index.php?P=9">Profil</a></li>
-                                    <li><a href="index.php?P=13">Siparişlerim</a></li>
-                                    <li><a href="index.php?P=10">Favorilerim</a></li>
-                                    <li><a href="configs/forms.php?userlogout=ok">Çıkış Yap</a></li>
+                                    <li><a href="my-profile">Profil</a></li>
+                                    <li><a href="my-orders">Siparişlerim</a></li>
+                                    <li><a href="my-favourites">Favorilerim</a></li>
+                                    <li><a href="logout">Çıkış Yap</a></li>
                                 </ul>
                             </li>
                         <?php
                         } else {
                         ?>
                             <li class="nav-item">
-                                <a href="index.php?P=3" class="nav-link dropdown-toggle " data-toggle="dropdown">Giriş&nbsp;<i class="fas fa-user"></i></a>
+                                <a href="login" class="nav-link dropdown-toggle " data-toggle="dropdown">Giriş&nbsp;<i class="fas fa-user"></i></a>
 
                             </li>
                             <li class="nav-item">
-                                <a href="index.php?P=4" class="nav-link dropdown-toggle " data-toggle="dropdown">Kayıt&nbsp;<i class="fas fa-user-plus"></i></a>
+                                <a href="register" class="nav-link dropdown-toggle " data-toggle="dropdown">Kayıt&nbsp;<i class="fas fa-user-plus"></i></a>
 
                             </li>
                         <?php
@@ -211,7 +211,7 @@ if (isset($_REQUEST["P"])) {
     <!-- Start Top Search -->
     <div class="top-search">
         <div class="container">
-            <form method="POST" action="index.php?P=8">
+            <form method="POST" action="search">
                 <input class="form-control " name="q" placeholder="Arama yapınız..." type="text">
                 <button class="btn btn-secondary" type="submit"> <i class="fa fa-search"></i> </button>
             </form>
@@ -253,12 +253,12 @@ if (isset($_REQUEST["P"])) {
                         <div class="footer-link">
                             <h4>Bilgi Sayfaları</h4>
                             <ul>
-                                <li><a href="index.php?P=1">Hakkımızda</a></li>
-                                <li><a href="index.php?P=14">Müşteri Hizmetleri</a></li>
-                                <li><a href="index.php?P=15">Site Haritası</a></li>
-                                <li><a href="index.php?P=16">Kullanım &amp; Koşulları</a></li>
-                                <li><a href="index.php?P=17">Gizlilik Politikası</a></li>
-                                <li><a href="index.php?P=18">Gönderim Seçenekleri</a></li>
+                                <li><a href="about-us">Hakkımızda</a></li>
+                                <li><a href="customer-services">Müşteri Hizmetleri</a></li>
+                                <li><a href="site-map">Site Haritası</a></li>
+                                <li><a href="terms-of-use">Kullanım &amp; Koşulları</a></li>
+                                <li><a href="privacy-policy">Gizlilik Politikası</a></li>
+                                <li><a href="shipping-methods">Gönderim Seçenekleri</a></li>
                             </ul>
                         </div>
                     </div>

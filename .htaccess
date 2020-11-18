@@ -1,3 +1,31 @@
 Options -indexes
 RewriteEngine On
 ErrorDocument 404 http://localhost/php/eticaret1/404.php
+
+RewriteRule ^$ index.php?P=0 [NC,L]
+RewriteRule ^login$ index.php?P=3 [NC,L]
+RewriteRule ^logout$ configs/forms.php?userlogout=ok [NC,L]
+RewriteRule ^register$ index.php?P=4 [NC,L]
+RewriteRule ^manager-login$ index.php?P=21 [NC,L]
+RewriteRule ^about-us$ index.php?P=1 [NC,L]
+RewriteRule ^contact-us$ index.php?P=2 [NC,L]
+RewriteRule ^customer-services$ index.php?P=14 [NC,L]
+RewriteRule ^site-map$ index.php?P=15 [NC,L]
+RewriteRule ^terms-of-use$ index.php?P=16 [NC,L]
+RewriteRule ^privacy-policy$ index.php?P=17 [NC,L]
+RewriteRule ^shipping-methods$ index.php?P=18 [NC,L]
+RewriteRule ^user-aggrement$ index.php?P=20 [NC,L]
+RewriteRule ^shopping-cart$ index.php?P=7 [NC,L]
+RewriteRule ^my-profile$ index.php?P=9 [NC,L]
+RewriteRule ^my-favourites$ index.php?P=10 [NC,L]
+RewriteRule ^place-order$ index.php?P=11 [NC,L]
+RewriteRule ^edit-profile$ index.php?P=12 [NC,L]
+RewriteRule ^my-orders$ index.php?P=13 [NC,L]
+RewriteRule ^checkout$ index.php?P=19 [NC,L]
+
+
+RewriteRule ^categories/(.*)/(.*)$ index.php?P=5&categoriesid=$2 [NC,L]
+RewriteRule ^urun-detay/(.*)/(.*)$ index.php?P=6&id=$2 [NC,L]
+RewriteRule ^search$ index.php?P=8 [NC,L]
+
+

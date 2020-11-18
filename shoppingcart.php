@@ -13,7 +13,7 @@ if (isset($_SESSION["users"])) {
                 <div class="col-lg-12">
                     <h2>Sepetim</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php?P=0">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
                         <li class="breadcrumb-item active">Sepetim</li>
                     </ul>
                 </div>
@@ -187,7 +187,7 @@ if (isset($_SESSION["users"])) {
                             <hr>
                         </div>
                     </div>
-                    <div class="col-12 d-flex shopping-box"><a href="index.php?P=19" class="ml-auto btn hvr-hover">Ödeme</a> </div>
+                    <div class="col-12 d-flex shopping-box"><a href="checkout" class="ml-auto btn hvr-hover">Ödeme</a> </div>
                 </div>
 
         </div>
@@ -201,7 +201,7 @@ if (isset($_SESSION["users"])) {
 <!-- End Cart -->
 <?php
 } else {
-    header("Location:index.php");
+    header("Location:./");
     exit();
 }
 ?>

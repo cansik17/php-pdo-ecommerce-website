@@ -30,7 +30,7 @@ if (isset($_SESSION['users'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-4 mx-auto">
-                    <h3 class="login-heading mb-4">Yönetici Giriş Formu</h3>
+                    <h3 class="login-heading mb-4">Üye Giriş Formu</h3>
                     <form method="POST" action="configs/forms.php">
                         <div class="form-label-group">
                             <label for="inputEmail">Email adresi</label>

@@ -88,7 +88,7 @@ $cartQuery		=	$db->prepare("SELECT * FROM shoppingcart WHERE cartid = ?");
 						$totalPayPriceUpdate	=	$db->prepare("UPDATE orders SET totalPayPrice = ?  WHERE  orderid = ?");
 						$totalPayPriceUpdate->execute([$totalPayPriceForm, $cartOrderId]);
 
-				Header("Location:index.php?P=13");
+				Header("Location:my-orders");
 			}	
 		
 
