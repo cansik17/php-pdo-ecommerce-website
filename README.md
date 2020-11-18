@@ -8,4 +8,4 @@ Php Pdo Ecommerce website with admin panel and a lot of options
 * make sure your mail provider give access to third party etc. otherwise you cant take or send mail
 * enjoy it!
 
-* note: Make sure your base name (index.php(head section)) correct.
+* **Note:** Make sure your base name (index.php(head section)) correct.
